@@ -1,5 +1,7 @@
 # CSV Data Analyst App
 
+A FastAPI-based web application that allows users to upload, clean, analyze, and visualize CSV datasets directly from the browser.
+
 A web-based data analysis application built with FastAPI, Pandas, JavaScript, and Plotly.
 
 Users can upload CSV files, clean data, generate charts, and perform common exploratory data analysis directly from the browser.
@@ -129,6 +131,16 @@ http://127.0.0.1:8000
 The application was tested using the Kaggle Superstore Sales Dataset.
 
 ---
+## Skills Demonstrated
+
+- Data Cleaning with Pandas
+- Exploratory Data Analysis (EDA)
+- Data Visualization
+- FastAPI Backend Development
+- REST API Design
+- Frontend Development (HTML/CSS/JavaScript)
+- Git & GitHub
+- Docker (coming next)
 
 ## Future Improvements
 
