@@ -2,10 +2,6 @@
 
 A FastAPI-based web application that allows users to upload, clean, analyze, and visualize CSV datasets directly from the browser.
 
-A web-based data analysis application built with FastAPI, Pandas, JavaScript, and Plotly.
-
-Users can upload CSV files, clean data, generate charts, and perform common exploratory data analysis directly from the browser.
-
 ---
 
 ## Features
@@ -125,6 +121,35 @@ http://127.0.0.1:8000
 ```
 
 ---
+---
+
+## Run with Docker
+
+Make sure Docker Desktop is installed and running.
+
+Build the Docker image:
+
+```bash
+docker build -t csv-data-analyst-app .
+```
+
+Run the container:
+
+```bash
+docker run -p 8000:8000 csv-data-analyst-app
+```
+
+Open the application:
+
+```text
+http://127.0.0.1:8000
+```
+
+To stop the container:
+
+```bash
+Ctrl + C
+```
 
 ## Example Dataset
 
@@ -140,7 +165,7 @@ The application was tested using the Kaggle Superstore Sales Dataset.
 - REST API Design
 - Frontend Development (HTML/CSS/JavaScript)
 - Git & GitHub
-- Docker (coming next)
+- Docker 
 
 ## Future Improvements
 
@@ -149,7 +174,7 @@ The application was tested using the Kaggle Superstore Sales Dataset.
 - Export charts as images
 - Statistical summaries
 - AI-powered data insights
-- Docker deployment
+
 
 ---
 
