@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 32px;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+h1 {
+    margin-bottom: 28px;
+}
+
+section {
+    background-color: white;
+    padding: 24px;
+    margin-bottom: 28px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+button {
+    padding: 9px 16px;
+    margin: 6px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+select, input {
+    padding: 8px;
+    margin: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+pre {
+    background-color: #f1f5f9;
+    padding: 16px;
+    overflow-x: auto;
+    max-height: 350px;
+    overflow-y: auto;
+    border-radius: 8px;
+}
+
+.summary-cards {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.summary-card {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 18px;
+    min-width: 160px;
+}
+
+.summary-card h3 {
+    margin: 0;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.summary-card p {
+    margin: 10px 0 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 16px;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid #e5e7eb;
+    padding: 11px;
+    text-align: left;
+}
+
+th {
+    background-color: #f1f5f9;
+    font-weight: 700;
+}
+
+#chartOutput,
+#analysisChartOutput {
+    width: 100%;
+    min-height: 450px;
+    margin-top: 20px;
+}

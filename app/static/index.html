@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSV Data Analyst App</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>CSV Data Analyst App</h1>
+    <div id="loadingMessage"></div>
+
+    <section>
+        <h2>1. Upload CSV File</h2>
+
+        <input type="file" id="csvFile" accept=".csv">
+        <button onclick="uploadFile()">Upload</button>
+
+        <h2>Initial Data Summary</h2>
+        <pre id="summaryOutput"></pre>
+    </section>
+
+    <section>
+        <h2>2. Clean Data</h2>
+
+        <label>
+            <input type="checkbox" id="removeDuplicates">
+            Remove duplicates
+        </label>
+
+        <br><br>
+
+        <label>Missing value strategy:</label>
+        <select id="missingStrategy">
+            <option value="none">Do nothing</option>
+            <option value="drop_rows">Drop rows with missing values</option>
+            <option value="fill_mean">Fill numeric missing values with mean</option>
+            <option value="fill_median">Fill numeric missing values with median</option>
+            <option value="fill_unknown">Fill text missing values with Unknown</option>
+            <option value="auto">Auto clean</option>
+        </select>
+
+        <button onclick="cleanData()">Clean Data</button>
+
+        <button onclick="downloadCleanedCSV()">Download Cleaned CSV</button>
+
+        <h2>Cleaning Result</h2>
+        <pre id="cleaningOutput"></pre>
+    </section>
+
+    <section>
+        <h2>3. Generate Chart</h2>
+
+        <label>Chart type:</label>
+        <select id="chartType" onchange="updateChartOptions()">
+            <option value="bar">Bar Chart</option>
+            <option value="line">Line Chart</option>
+            <option value="scatter">Scatter Plot</option>
+            <option value="histogram">Histogram</option>
+        </select>
+
+        <br><br>
+
+        <label>X column:</label>
+        <select id="xColumn"></select>
+
+        <label>Y column:</label>
+        <select id="yColumn"></select>
+
+        <label>Aggregation:</label>
+        <select id="aggregation">
+            <option value="sum">Sum</option>
+            <option value="average">Average</option>
+            <option value="count">Count</option>
+            <option value="min">Minimum</option>
+            <option value="max">Maximum</option>
+        </select>
+
+        <button onclick="generateChart()">Generate Chart</button>
+
+        <h2>Chart Output</h2>
+        <div id="chartOutput"></div>
+    </section>
+
+    <section>
+        <h2>4. Quick Analysis</h2>
+
+        <label>Analysis type:</label>
+        <select id="analysisType"onchange="updateAnalysisOptions()">
+            <option value="highest">Highest Value by Group</option>
+            <option value="average">Average by Group</option>
+            <option value="count">Count by Category</option>
+            <option value="trend">Trend Over Time</option>
+            <option value="correlation">Correlation Analysis</option>
+
+        </select>
+
+        <label>Group column:</label>
+        <select id="analysisGroupColumn"></select>
+
+        <label>Value column:</label>
+        <select id="analysisValueColumn"></select>
+
+        <button onclick="runAnalysis()">Run Analysis</button>
+
+        <h2>Analysis Result</h2>
+        <div id="analysisOutput"></div>
+
+        <h2>Analysis Chart</h2>
+        <div id="analysisChartOutput"></div>
+    </section>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
